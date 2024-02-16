@@ -26,7 +26,6 @@ router.get('/', async (req, res) => {
 	router.post('/addUser', (req, res) => {
 		console.log("form submit");
 		console.log(req.body);
-	   });
 	   try {
 		const success = await dbModel.addUser(req.body);
 		if (success) {
@@ -42,7 +41,7 @@ router.get('/', async (req, res) => {
 		console.log("Error writing to MySQL");
 		console.log(err);
 		}
-		});
+});
 
 		router.get('/deleteUser', async (req, res) => {
 			console.log("delete user");

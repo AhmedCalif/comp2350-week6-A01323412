@@ -6,7 +6,7 @@ async function getAllUsers() {
 		SELECT web_user_id, first_name, last_name, email
 		FROM web_user;
 	`;
-	
+	 
 	try {
 		const results = await database.query(sqlQuery);
 		console.log(results[0]);
