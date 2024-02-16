@@ -5,6 +5,11 @@ const dbModel = include('databaseAccessLayer');
 
 router.get('/', async (req, res) => {
 	console.log("page hit");
+
+	router.post('/addUser', (req, res) => {
+		console.log("form submit");
+		console.log(req.body);
+	   });
 	
 	try {
 		const result = await dbModel.getAllUsers();
