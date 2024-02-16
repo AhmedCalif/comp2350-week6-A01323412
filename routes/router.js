@@ -21,9 +21,10 @@ router.get('/', async (req, res) => {
 		res.render('error', {message: 'Error reading from MySQL'});
 		console.log("Error reading from mysql");
 	}
+})
 
 
-	router.post('/addUser', (req, res) => {
+	router.post('/addUser', async (req, res) => {
 		console.log("form submit");
 		console.log(req.body);
 	   try {
