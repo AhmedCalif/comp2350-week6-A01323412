@@ -13,7 +13,7 @@ async function getAllUsers() {
 		return results[0];
 	}
 	catch (err) {
-		console.log("Error selecting from todo table");
+		console.log("Error selecting from users table");
 		console.log(err);
 		return null;
 	}
