@@ -2,6 +2,10 @@ const router = require('express').Router();
 const database = include('databaseConnection');
 const dbModel = include('databaseAccessLayer');
 //const dbModel = include('staticData');
+const bodyParser = require("body-parser");
+router.use(bodyParser.urlencoded({ extended: false }))
+
+
 
 router.get('/', async (req, res) => {
 	console.log("page hit");
